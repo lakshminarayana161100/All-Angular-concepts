@@ -1,0 +1,13 @@
+<div class="dropdown">
+
+  <select (change)="updateDistricts($event)">
+    <option value="-1">select state</option>
+    <option value=" {{s['id']}}" *ngFor="let s of states">{{s['name']}}</option>
+
+  </select>
+
+  <select>
+    <option value="-1">selcet district</option>
+    <option value="{{d ['id']}}" *ngFor="let d of fliterDistricts">{{d['name']}}</option>
+  </select>
+</div>

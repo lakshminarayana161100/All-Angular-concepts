@@ -1,0 +1,13 @@
+.special{
+    background-color: antiquewhite;
+}
+
+.active {
+    background-color: aqua;
+    color: white;
+}
+
+.inactive {
+    background-color: blueviolet;
+    color: white;
+}

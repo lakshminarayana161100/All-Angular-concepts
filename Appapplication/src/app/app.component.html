@@ -1,0 +1,14 @@
+<label for="quantity"></label>
+<input type="text" id="quantity" name="quantity" [(ngModel)]="UPC" >
+{{UPC}}
+<br>
+<button (click)="getproduct()">get the product</button>
+<div *ngFor=" let text of Items">
+    <h1>{{text.owner}}</h1>
+     <h1>{{text.UPC_code}}</h1>
+      <h1>{{text.category}}</h1>
+       <h1>{{text.name}} </h1>
+      <h1> {{text.price}}</h1>
+<h1> {{text.quantity}}</h1>
+    <img src="{{text.image}}" width="50" height="50">
+</div>

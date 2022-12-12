@@ -1,0 +1,36 @@
+
+<h1>validation and error handling</h1>
+<form action ="">
+  <div ngModelGroup #group ="ngModelGroup">
+     User name :<input type="text" required minlength="4" class="form-control w-5 m-2" ngModel name="uname" #un="ngModel"> <br>
+    <div >
+       <p class="error-msg" *ngIf="un.touched&&un.errors?.['required']">username is required</p> 
+                                  <!--required is a array-->
+        <p class="error-msg" *ngIf="un.touched&&un.errors?.['minlength']">username contain min 4 characters</p>
+                                   <!--minlength is a array-->  
+    </div>
+    <div>
+      password : <input type="password"  class="form-control w-5 m-2" ngModel name="pwd" #p="ngModel" required minlength="8"><br>
+      <p class="error-msg" *ngIf="p.touched&&p.errors?.['required']">password is required</p>
+       <p class="error-msg" *ngIf="p.touched&&p.errors?.['minlength']">password contain min 8 characters</p> 
+
+    </div>
+  </div>
+  <button (click)="show(un,p,group.value)" [disabled]="group.invalid" class="btn btn-primary">click</button>
+</form>
+
+
+<hr>
+
+
+<h1>ngform and ngsubmit</h1>
+<form action=""  #loginForm="ngForm"  (ngSubmit)="submit(loginForm)">
+
+  User name :<input type="text" required minlength="4" class="form-control w-5 m-2" ngModel name="uname" #un="ngModel"> <br>
+
+  password : <input type="password"  class="form-control w-5 m-2" ngModel name="pwd" #p="ngModel" required minlength="8"><br>
+
+  <button  class="btn btn-primary">submit</button>
+</form>
+
+

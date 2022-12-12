@@ -1,0 +1,17 @@
+ name :<input type ="text" [(ngModel)]="kfc" >
+
+ 
+
+
+ <div [ngSwitch]="kfc">
+
+<div *ngSwitchCase="'+'">{{num1}} + {{num2}}={{num1+num2}}</div>
+<div *ngSwitchCase="'-'">{{num1}} - {{num2}}</div>
+<div *ngSwitchCase="'/'">{{num1}} / {{num2}}</div>
+<div *ngSwitchCase="'*'">{{num1}} * {{num2}}</div>
+<div *ngSwitchDefault>Invaild match</div>
+
+
+
+
+</div> 

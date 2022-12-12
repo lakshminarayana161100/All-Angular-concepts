@@ -1,0 +1,23 @@
+<p *ngFor="let n of nums">paragraph {{n}}</p>
+
+
+<table border="2">
+    <tr>
+        <td>content</td>
+        <td>Index</td>
+        <td>even</td>
+        <td>odd</td>
+        <td>first</td>
+        <td>last</td>
+        
+    </tr>
+
+    <tr *ngFor="let m of Mobiles ; index as i ; even as e ; first as f ; last as l ; odd as o ">
+        <td>{{m}}</td>
+        <td>{{i}}</td>
+        <td>{{e}}</td>
+        <td>{{o}}</td>
+        <td>{{f}}</td>
+        <td>{{l}}</td>
+    </tr>
+</table>

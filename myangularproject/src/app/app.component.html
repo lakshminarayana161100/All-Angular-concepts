@@ -1,0 +1,32 @@
+<h1>String interpolation:-</h1>
+<h1 class="special">{{city}}</h1>
+<h1 class="special">{{town}}</h1>
+<hr>
+
+<h1>property binding:-</h1>
+Name : <input type="text">
+<button [disabled]=isdisabled>Submit</button>
+<hr>
+
+<h1>Class binding:-</h1>
+<h2 [class]="isactive? 'active' :'inactive'">this is class binding </h2>
+<hr>
+
+<h1>style binding:-</h1>
+<h1 [style] = "{color:cvar}"> this is a heading</h1>
+<hr>
+
+<h1>Event binding:-</h1>
+<h1>Counter : {{counter}}</h1>
+<button (click)="increment()">click</button>
+<button (click)="decrement()">click</button>
+<hr>
+  Name: <input type="text"  on-input="changeName($event)">
+    <!--$event is predefined to pass the some data information (user)-->
+ <h1>your name :{{name}}  </h1>
+<hr>
+
+<h1>This is a Two-way data binding:-/h1>
+City : <input type="text" [(ngModel)] = "capital" >
+     <p>{{capital}}</p>
+ <button (click)="updatedcapital()">Update</button>

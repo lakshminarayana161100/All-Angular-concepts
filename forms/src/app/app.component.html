@@ -1,0 +1,25 @@
+
+<form action ="">
+  <div ngModelGroup #group ="ngModelGroup">
+     User name :<input type="text" minlength="4" class="form-control w-5 m-2" ngModel name="uname" #un="ngModel"> <br>
+     <div *ngIf="un.touched">
+      <p class="error-msg" *ngIf="un.errors?.['required']">username is required</p>
+      <p class="error-msg" *ngIf="un.errors?.['required']">username contain min 4 characters</p>
+     </div>
+
+     password : <input type="password"  class="form-control w-5 m-2" ngModel name="pwd" #p="ngModel"><br>
+  </div>
+     <button (click)="show(un,p,group)" class="btn btn-primary">click</button>
+  <!--un,p,group is a template reference variables-->
+</form>
+
+
+from group print : {{group.value | json}} <br>
+user name print :{{un.value |json}} <br>
+password print: {{p.value |json}} <br>
+
+
+
+
+
+<app-formvalidation></app-formvalidation>

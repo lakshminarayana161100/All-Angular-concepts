@@ -1,0 +1,12 @@
+button{
+    background-color: aqua;
+    border: none;
+    padding: 27px 62px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer; 
+
+
+    justify-content: center;
+ 
+}
